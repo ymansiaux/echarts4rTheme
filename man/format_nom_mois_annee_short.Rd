@@ -2,13 +2,16 @@
 % Please edit documentation in R/fonction_formattage_dates_JS.R
 \name{format_nom_mois_annee_short}
 \alias{format_nom_mois_annee_short}
-\title{Title}
+\title{Format ex : Juil 2020}
 \usage{
 format_nom_mois_annee_short()
 }
 \value{
-
+un char
 }
 \description{
-Title
+Format ex : Juil 2020
+}
+\examples{
+\dontrun{format_nom_mois_annee_short()}
 }

@@ -2,13 +2,16 @@
 % Please edit documentation in R/fonction_formattage_dates_JS.R
 \name{format_horaire_from_hour_in_integer}
 \alias{format_horaire_from_hour_in_integer}
-\title{Title}
+\title{Format horaire a partir d'un integer qui est l'heure de la journee}
 \usage{
 format_horaire_from_hour_in_integer()
 }
 \value{
-
+un char
 }
 \description{
-Title
+Format horaire a partir d'un integer qui est l'heure de la journee
+}
+\examples{
+\dontrun{format_horaire_from_hour_in_integer()}
 }

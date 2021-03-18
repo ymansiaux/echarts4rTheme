@@ -2,13 +2,16 @@
 % Please edit documentation in R/fonction_formattage_dates_JS.R
 \name{format_isoweek}
 \alias{format_isoweek}
-\title{Title}
+\title{Renvoie le numero de semaine}
 \usage{
 format_isoweek()
 }
 \value{
-
+un char
 }
 \description{
-Title
+Renvoie le numero de semaine
+}
+\examples{
+\dontrun{format_isoweek()}
 }

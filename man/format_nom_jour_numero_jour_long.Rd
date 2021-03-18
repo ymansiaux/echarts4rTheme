@@ -2,13 +2,16 @@
 % Please edit documentation in R/fonction_formattage_dates_JS.R
 \name{format_nom_jour_numero_jour_long}
 \alias{format_nom_jour_numero_jour_long}
-\title{Title}
+\title{Format ex : Lundi 25}
 \usage{
 format_nom_jour_numero_jour_long()
 }
 \value{
-
+un char
 }
 \description{
-Title
+Format ex : Lundi 25
+}
+\examples{
+\dontrun{format_nom_jour_numero_jour_long()}
 }

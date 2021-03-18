@@ -2,7 +2,7 @@
 % Please edit documentation in R/fonction_formattage_dates_JS.R
 \name{format_nom_mois_annee_long}
 \alias{format_nom_mois_annee_long}
-\title{Title}
+\title{Format ex : Juillet 2020}
 \usage{
 format_nom_mois_annee_long()
 }
@@ -10,5 +10,8 @@ format_nom_mois_annee_long()
 
 }
 \description{
-Title
+Format ex : Juillet 2020
+}
+\examples{
+\dontrun{format_nom_mois_annee_long()}
 }

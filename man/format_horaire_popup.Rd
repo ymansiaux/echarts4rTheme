@@ -2,7 +2,7 @@
 % Please edit documentation in R/fonction_formattage_dates_JS.R
 \name{format_horaire_popup}
 \alias{format_horaire_popup}
-\title{Title}
+\title{Format horaire dans un label a partir d'une date}
 \usage{
 format_horaire_popup()
 }
@@ -10,5 +10,8 @@ format_horaire_popup()
 
 }
 \description{
-Title
+Format horaire dans un label a partir d'une date
+}
+\examples{
+\dontrun{format_horaire_popup()}
 }

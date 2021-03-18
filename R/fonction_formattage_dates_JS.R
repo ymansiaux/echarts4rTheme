@@ -3,23 +3,23 @@
 # https://stackoverflow.com/questions/24998624/day-name-from-date-in-js
 # https://stackoverflow.com/questions/9045868/javascript-date-getweek
 
-#' Title
+#' Format horaire a partir d'une date
 #'
-#' @return
+#' @return un char
 #' @export
 #'
-#' @examples
+#' @examples \dontrun{format_horaire()}
 format_horaire <- function() {
   '{H}:{mm}'
 }
 
 
-#' Title
+#' Format horaire a partir d'un integer qui est l'heure de la journee
 #'
-#' @return
+#' @return un char
 #' @export
 #' @importFrom htmlwidgets JS
-#' @examples
+#' @examples \dontrun{format_horaire_from_hour_in_integer()}
 format_horaire_from_hour_in_integer <- function() {
 
   JS( "function(value){
@@ -39,12 +39,12 @@ format_horaire_from_hour_in_integer <- function() {
 
 }
 
-#' Title
+#' Format horaire dans un label a partir d'une date
 #'
 #' @return
 #' @export
 #' @importFrom htmlwidgets JS
-#' @examples
+#' @examples \dontrun{format_horaire_popup()}
 format_horaire_popup <- function() {
   JS(
     'function(value){
@@ -62,13 +62,13 @@ format_horaire_popup <- function() {
   )
 
 }
-#' Title
+#' Format ex : Lun 25
 #'
-#' @return
+#' @return un char
 #' @export
 #' @importFrom htmlwidgets JS
 #'
-#' @examples
+#' @examples \dontrun{format_nom_jour_numero_jour_short()}
 format_nom_jour_numero_jour_short <- function() {
   JS(
     "function(value){
@@ -82,12 +82,12 @@ format_nom_jour_numero_jour_short <- function() {
   )
 }
 
-#' Title
+#' Format ex : Lundi 25
 #'
-#' @return
+#' @return un char
 #' @export
 #' @importFrom htmlwidgets JS
-#' @examples
+#' @examples \dontrun{format_nom_jour_numero_jour_long()}
 format_nom_jour_numero_jour_long <-  function() {
   JS(
     "function(value){
@@ -101,12 +101,12 @@ format_nom_jour_numero_jour_long <-  function() {
   )
 }
 
-#' Title
+#' Format ex : Juil 2020
 #'
-#' @return
+#' @return un char
 #' @export
 #' @importFrom htmlwidgets JS
-#' @examples
+#' @examples \dontrun{format_nom_mois_annee_short()}
 format_nom_mois_annee_short <-  function() {
   JS(
     "function(value){
@@ -121,12 +121,12 @@ format_nom_mois_annee_short <-  function() {
 }
 
 
-#' Title
+#' Format ex : Juillet 2020
 #'
 #' @return
 #' @export
 #' @importFrom htmlwidgets JS
-#' @examples
+#' @examples \dontrun{format_nom_mois_annee_long()}
 format_nom_mois_annee_long <-  function() {
   JS(
     "function(value){
@@ -140,12 +140,12 @@ format_nom_mois_annee_long <-  function() {
   )
 }
 
-#' Title
+#' Renvoie le numero de semaine
 #'
-#' @return
+#' @return un char
 #' @export
 #' @importFrom htmlwidgets JS
-#' @examples
+#' @examples \dontrun{format_isoweek()}
 format_isoweek <-  function() {
   JS(
     "function(value){
@@ -183,38 +183,3 @@ format_isoweek <-  function() {
     return weeknum;}"
   )
 }
-###########
-### OLD ###
-###########
-
-extract_hour_from_date <- htmlwidgets::JS(
-  'function(value){
-      let d = new Date(value);
-      let h = d.getHours();
-      let m = d.getMinutes();
-      let label = "";
-      if (m < 10){
-          label = h + ":0" + m;
-        }
-      else {
-          label = h + ":" +m;
-        }
-      return label;}'
-)
-
-
-affichage_heure_popup <- htmlwidgets::JS(
-  'function(value){
-    let d = new Date(value.value[0]);
-    let h = d.getHours();
-    let m = d.getMinutes();
-    let label = "";
-    if (m < 10){
-          label = h + ":0" + m;
-        }
-    else {
-          label = h + ":" +m;
-    }
-    return label;}'
-)
-
