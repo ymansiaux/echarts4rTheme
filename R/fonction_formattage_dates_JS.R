@@ -18,10 +18,35 @@ format_horaire <- function() {
 #'
 #' @return
 #' @export
+#' @importFrom htmlwidgets JS
+#' @examples
+format_horaire_from_hour_in_integer <- function() {
+
+  JS( "function(value){
+    let d = new Date('January 01, 1970 00:00:00');
+    d.setHours(value);
+
+    let h = d.getHours();
+    let m = d.getMinutes();
+    let label = '';
+    if (m < 10){
+          label = h + ':0' + m;
+        }
+    else {
+          label = h + ':' +m;
+    }
+    return label;}")
+
+}
+
+#' Title
 #'
+#' @return
+#' @export
+#' @importFrom htmlwidgets JS
 #' @examples
 format_horaire_popup <- function() {
-  htmlwidgets::JS(
+  JS(
     'function(value){
     let d = new Date(value.value[0]);
     let h = d.getHours();
@@ -41,10 +66,11 @@ format_horaire_popup <- function() {
 #'
 #' @return
 #' @export
+#' @importFrom htmlwidgets JS
 #'
 #' @examples
 format_nom_jour_numero_jour_short <- function() {
-  htmlwidgets::JS(
+  JS(
     "function(value){
       let d = new Date(value);
       let y = d.getDate();
@@ -60,10 +86,10 @@ format_nom_jour_numero_jour_short <- function() {
 #'
 #' @return
 #' @export
-#'
+#' @importFrom htmlwidgets JS
 #' @examples
 format_nom_jour_numero_jour_long <-  function() {
-  htmlwidgets::JS(
+  JS(
     "function(value){
       let d = new Date(value);
       let y = d.getDate();
@@ -79,10 +105,10 @@ format_nom_jour_numero_jour_long <-  function() {
 #'
 #' @return
 #' @export
-#'
+#' @importFrom htmlwidgets JS
 #' @examples
 format_nom_mois_annee_short <-  function() {
-  htmlwidgets::JS(
+  JS(
     "function(value){
       let d = new Date(value);
       let y = d.getFullYear();
@@ -99,10 +125,10 @@ format_nom_mois_annee_short <-  function() {
 #'
 #' @return
 #' @export
-#'
+#' @importFrom htmlwidgets JS
 #' @examples
 format_nom_mois_annee_long <-  function() {
-  htmlwidgets::JS(
+  JS(
     "function(value){
       let d = new Date(value);
       let y = d.getFullYear();
@@ -118,10 +144,10 @@ format_nom_mois_annee_long <-  function() {
 #'
 #' @return
 #' @export
-#'
+#' @importFrom htmlwidgets JS
 #' @examples
 format_isoweek <-  function() {
-  htmlwidgets::JS(
+  JS(
     "function(value){
 
     let dowOffset = 1;
